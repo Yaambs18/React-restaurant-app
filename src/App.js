@@ -1,12 +1,13 @@
 import Header from "./components/Layouts/Header";
-import SummaryCard from "./components/Meals/SummaryCard";
+import Meals from "./components/Meals/Meals";
 
 function App() {
   return (
     <div>
       <Header />
-      <SummaryCard />
-      <h2>Let's get started!</h2>
+      <main>
+        <Meals />
+      </main>
     </div>
   );
 }

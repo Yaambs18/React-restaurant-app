@@ -1,3 +1,4 @@
+import Input from "../UI/Input";
 import "./MealItemForm.css";
 
 const MealItemForm = (props) => {
@@ -9,10 +10,7 @@ const MealItemForm = (props) => {
 
     return (
         <form className="form" >
-            <div>
-                <label>Amount</label>
-                <input type="number" step={1} min={1}/>
-            </div>
+            <Input label="Amount" input={{id: 'amount', type: 'number', min: '1', max: '5', step: '1'}} />
             <button onClick={submitHandler}>+Add</button>
         </form>
     )

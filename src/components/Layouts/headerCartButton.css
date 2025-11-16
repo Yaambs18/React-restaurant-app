@@ -11,6 +11,12 @@
     border: none;
 }
 
+button:hover, 
+button:active {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.623);
+}
+
 .cart svg {
     width: 20px;
     height: 20px;

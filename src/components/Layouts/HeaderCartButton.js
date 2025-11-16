@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Button from "../UI/Button";
 import "./headerCartButton.css";
+import CartContext from "../../store/cart-context";
 
 const HeaderCartButton = (props) => {
-    const cartCount = 3;
+    const cartCtx = useContext(CartContext);
+    const cartCount = cartCtx.items.reduce((current, item) => current+ +item.amount, 0);
 
     return (
         <Button className={props.className} onClick={props.onCartClick}>

@@ -1,11 +1,18 @@
+import { useContext } from "react";
 import Input from "../UI/Input";
 import "./MealItemForm.css";
+import CartContext from "../../store/cart-context";
 
 const MealItemForm = (props) => {
+    const item = props.item;
+
+    const cartCtx = useContext(CartContext);
 
     const submitHandler = (event) => {
         event.preventDefault();
-        console.log('Add clicked');
+        console.log('added');
+        item.amount = +event.target.form.amount.value
+        cartCtx.addItem(item)
     }
 
     return (
